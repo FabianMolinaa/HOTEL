@@ -2,130 +2,9 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Importa la librería de iconos Boxicons -->
 <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<style>
-body {
-  font-family: montserrat;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
- 
-}
-
-/* Contenedor para centrar y ajustar el contenido */
-.container {
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 5%;
-}
-
-/* Estilo para la barra de navegación */
-.navbar {
-  overflow: hidden;
-  border-bottom: 1px solid #00be30;
-  padding: 10px 0;
-  margin-bottom: 20px;
-}
-
-/* Estilo para los enlaces de la barra de navegación */
-.navbar a {
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  transition: 0.3s;
-}
-
-/* Cambio de color al pasar el mouse sobre los enlaces */
-.navbar a:hover {
-  color: green;
-}
-
-/* Estilo para el enlace activo (seleccionado) */
-.navbar a.active {
-  color: green;
-}
-
-/* Sección alineada a la izquierda */
-.navbar .left {
-  float: left;
-}
-
-/* Sección alineada a la derecha */
-.navbar .right {
-  float: right;
-}
-
-/* Estilo para el icono de inicio de sesión */
-.login-icon {
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-/* Limpiar floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Estilo para el encabezado con la imagen de fondo */
-.header {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-.header .overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.header h1 {
-  font-size: 90px;
-  margin: 0;
-}
-
-.header .search-bar {
-  margin-top: 20px;
-}
-
-.header .search-bar input[type="text"] {
-  width: 60%;
-  padding: 10px;
-  font-size: 17px;
-  border: none;
-  border-radius: 5px;
-  outline: none;
-}
-
-/* Estilo para el contenido de las pestañas */
-.tabcontent {
-  display: none;
-  padding: 20px;
-  border-top: none;
-  -webkit-animation: fadeEffect 1s;
-  animation: fadeEffect 1s;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-/* Efecto de desvanecimiento en las pestañas */
-@-webkit-keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0;}
-  to {opacity: 1;}
-}
-</style>
+<link rel="stylesheet" href="../css/index.css">
 </head>
 <body onload="showTab('Inicio')">
 
@@ -150,20 +29,24 @@ body {
       alt="Hotel Veranum" width="100%" height="600px">
       <div class="overlay">
         <h1>HOTEL VERANUM</h1>
-        <div class="search-bar">
-          <input type="text" placeholder="Search">
-        </div>
+        <div class="search-container">
+          <div class="search-box">
+              <input type="text" class="search-input" placeholder="Buscar...">
+              <span class="search-icon"><i class='bx bx-search'></i></span>
+          </div>
+      </div>
       </div>
     </div>
+    
   </div>
-<!--Pestaña de TOURS-->
+
+  <!--Pestaña de TOURS-->
   <div id="Tours" class="tabcontent">
     <div class="header">
       <img src="https://agasp.xunta.gal/sites/w_agasp/files/styles/large/public/galleries/2019/02/_mg_0185.jpg?itok=Yo3EGiWp" 
       alt="Hotel Veranum"
       width="100%" height="100px"
       >
-
       <div class="overlay">
         <h1>HOTEL VERANUM</h1>
       </div>
@@ -171,14 +54,14 @@ body {
     <h3>Tours</h3>
     <p>Explora nuestros increíbles tours.</p>
   </div>
-<!--Pestañas de RESERVA-->
+
+  <!--Pestañas de RESERVA-->
   <div id="Reserva" class="tabcontent">
     <div class="header">
       <img src="https://agasp.xunta.gal/sites/w_agasp/files/styles/large/public/galleries/2019/02/_mg_0185.jpg?itok=Yo3EGiWp" 
       alt="Hotel Veranum"
       width="100%" height="100px"
       >
-
       <div class="overlay">
         <h1>HOTEL VERANUM</h1>
       </div>
@@ -196,52 +79,32 @@ body {
     <h3>Contacto</h3>
     <p>Ponte en contacto con nosotros.</p>
   </div>
-<!--Pestaña de INCIAR SESION-->
+
+  <!--Pestaña de INCIAR SESION-->
   <div id="Login" class="tabcontent">
     <div class="header">
       <img src="https://agasp.xunta.gal/sites/w_agasp/files/styles/large/public/galleries/2019/02/_mg_0185.jpg?itok=Yo3EGiWp" 
       alt="Hotel Veranum"
       width="100%" height="100px"
       >
-
       <div class="overlay">
         <h1>HOTEL VERANUM</h1>
       </div>
     </div>
-    <h3>Iniciar sesión</h3>
-    <p>Ingresa tus datos para iniciar sesión.</p>
+    <div class="container2-wrapper">
+      <div class="container2">
+        <form>
+          <input class="input_login" type="text" id="email" name="email" placeholder="Correo electrónico">
+          <input class="input_login" type="password" id="password" name="password" placeholder="Contraseña">
+          <p>¿Has olvidado tu contraseña?<a href="">Click aquí</a></p>
+          <button class="button" type="submit">Iniciar Sesión</button>
+          <p>¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+        </form>
+      </div>
+    </div>
   </div>
-
 </div>
-
-<script>
-// Función para mostrar el contenido de la pestaña inicial al cargar la página
-function showTab(tabName) {
-  var tabcontent = document.getElementsByClassName("tabcontent");
-  var tablinks = document.getElementsByClassName("tablinks");
-
-  // Ocultar todos los contenidos de las pestañas y remover la clase 'active' de los enlaces
-  for (var i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Mostrar el contenido de la pestaña seleccionada y agregar la clase 'active' al enlace correspondiente
-  document.getElementById(tabName).style.display = "block";
-  for (var i = 0; i < tablinks.length; i++) {
-    if (tablinks[i].getAttribute('onclick').includes(tabName)) {
-      tablinks[i].className += " active";
-    }
-  }
-}
-
-// Función para cambiar de pestaña al hacer clic en un enlace
-function openCity(evt, cityName) {
-  showTab(cityName); // Mostrar la pestaña correspondiente
-  evt.currentTarget.className += " active"; // Agregar la clase 'active' al enlace clicado
-}
-</script>
+<script src="../js/index.js"></script>
 
 </body>
 </html>
-
