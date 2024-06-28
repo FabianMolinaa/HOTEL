@@ -200,6 +200,48 @@ body {
   color: #195783;
   font-size: 38px;
 }
+/*Otra barra de busqueda*/
+.search-container2-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.search-container2-wrapper h3 {
+  margin-right: 20px; /* Ajustar según sea necesario para el espaciado */
+}
+
+.search-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 100px); /* Ajustar el ancho restante, considerando el h3 */
+}
+
+.search-box2 {
+  position: relative;
+  width: 500px;
+}
+
+.search-input2 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 100%;
+  padding: 12px 20px 12px 50px; /* Ajustar el padding izquierdo para dejar espacio al icono */
+  border: none;
+  border-radius: 4rem;
+  font-size: 15px;
+}
+
+.search-icon2 {
+  position: absolute;
+  top: 50%;
+  left: 10px; 
+  transform: translateY(-50%);
+  color: green;
+  font-size: 25px;
+}
+
 
 .aspect-ratio-container {
   position: relative;
