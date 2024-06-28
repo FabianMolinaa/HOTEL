@@ -50,19 +50,34 @@
         <h1>HOTEL VERANUM</h1>
       </div>
     </div>
-    <div class="search-container2-wrapper">
-      <h3>Tours</h3>
-      <div class="search-container2">
-        <div class="search-box2">
-          <span class="search-icon2"><i class='bx bx-search'></i></span>
-          <input type="text" class="search-input2" placeholder="Buscar...">
-        </div>
-      </div>
+    <h2>Filter Elements</h2>
+
+    <div id="myBtnContainer">
+      <button class="btn active" onclick="filterSelection('santiago')"> Santiago</button>
+      <button class="btn" onclick="filterSelection('quinta')"> Quinta Región</button>
     </div>
-    
-    
-    <p>Explora nuestros increíbles tours.</p>
+
+    <div class="container_tours">
+      <div class="filterDiv santiago show">
+        <img src="path/to/templo_bahai.jpg" alt="Templo Bahai">
+        <div>Templo Bahai</div>
+      </div>
+      <div class="filterDiv santiago show">
+        <img src="path/to/plaza_de_armas.jpg" alt="Plaza de Armas">
+        <div>Plaza de Armas</div>
+      </div>
+      <div class="filterDiv santiago show">
+        <img src="path/to/teleferico.jpg" alt="Telefericos">
+        <div>Telefericos</div>
+      </div>
+      <div class="filterDiv quinta">
+        <img src="path/to/another_image.jpg" alt="Another Place">
+        <div>Another Place</div>
+      </div>
+      <!-- Add more items as needed -->
+    </div>
   </div>
+  
 
   <!--Pestañas de RESERVA-->
   <div id="Reserva" class="tabcontent">
@@ -74,7 +89,15 @@
         <h1>HOTEL VERANUM</h1>
       </div>
     </div>
-    <h3>Reserva</h3>
+    <div class="search-container2-wrapper">
+      <h3>Reserva</h3>
+      <div class="search-container2">
+        <div class="search-box2">
+          <span class="search-icon2"><i class='bx bx-search'></i></span>
+          <input type="text" class="search-input2" placeholder="Buscar...">
+        </div>
+      </div>
+    </div>
     <p>Haz tu reserva fácilmente aquí.</p>
     <div>
       <font color= "green"><h3><i>Sedes</i></h3></font>
