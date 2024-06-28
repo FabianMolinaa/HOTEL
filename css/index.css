@@ -257,7 +257,7 @@ body {
 #myBtnContainer {
   display: flex;
   justify-content: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 .btn {
@@ -289,17 +289,17 @@ body {
 
 .filterDiv {
   background-color: #ffffff;
-  width: 200px;
-  height: 200px;
-  line-height: 200px;
+  width: 500px;
+  height: 500px;
   text-align: center;
   color: #333;
   font-size: 20px;
   margin: 10px;
   display: none;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .filterDiv.show {
@@ -307,8 +307,22 @@ body {
 }
 
 .filterDiv img {
-  max-width: 100%;
-  max-height: 100%;
-  border-radius: 10px;
+  width: 100%;
+  height: 70%;
+  
 }
 
+.filterDiv1 {
+  background-color: #ffffff;
+  width: 500px;
+  height: 500px;
+  text-align: center;
+  color: #333;
+  font-size: 30px;
+  margin: 10px;
+  display: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
